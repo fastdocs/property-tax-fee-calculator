@@ -1,6 +1,6 @@
 # property-tax-fee-calculator
 
-Open Source calculator for property tax fees based on Steuerberatervergütungsverordnung
+Open Source calculator for property tax fees based on [Steuerberatervergütungsverordnung](https://www.gesetze-im-internet.de/stbgebv/BJNR014420981.html).
 
 ## Usage
 
