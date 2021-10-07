@@ -4,7 +4,7 @@ Open Source calculator for property tax fees based on Steuerberatervergütungsve
 
 ## Usage
 
-The `calculateFee()` function expexts to variables `averagePropertyValue` and `amountOfDeclarations`. The Result returns an object with three different values. A maximum fee, a minimum fee and a avarage fee.
+The `calculateFee()` function expects to variables `averagePropertyValue` and `amountOfDeclarations`. The Result returns an object with three different values. A maximum fee, a minimum fee and an avarage fee.
 
 ### Example
 
