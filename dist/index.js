@@ -586,15 +586,16 @@ var formatCurrency = function (value) {
         currency: "EUR"
     }).format(value);
 };
-var calculateFees = function (propertyValue, amountOfDeclarations) {
+var calculateFee = function (averagePropertyValue, amountOfDeclarations) {
     var value = 0;
     fees.forEach(function (entry) {
-        if (propertyValue >= entry.start && propertyValue <= entry.limit) {
+        if (averagePropertyValue >= entry.start &&
+            averagePropertyValue <= entry.limit) {
             value = amountOfDeclarations * entry.fee;
         }
     });
-    var minValue = formatCurrency(value * 1);
-    var midValue = formatCurrency(value * 9.5);
-    var maxValue = formatCurrency(value * 18);
-    return { minValue: minValue, midValue: midValue, maxValue: maxValue };
+    var minFee = formatCurrency(value * 1);
+    var avarageFee = formatCurrency(value * 9.5);
+    var maxFee = formatCurrency(value * 18);
+    return { minFee: minFee, avarageFee: avarageFee, maxFee: maxFee };
 };

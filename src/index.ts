@@ -1,8 +1,12 @@
-type Result = { minValue: string; midValue: string; maxValue: string };
-type InputFee = { start: number; limit: number; fee: number }[];
-type OutputFee = { start: number; limit: number; fee: number };
+type FeeResults = {
+	minFee: string;
+	avarageFee: string;
+	maxFee: string;
+};
+type FeeData = { start: number; limit: number; fee: number }[];
+type Fee = { start: number; limit: number; fee: number };
 
-const fees: InputFee = [
+const fees: FeeData = [
 	{
 		start: 0,
 		limit: 25000,
@@ -671,21 +675,24 @@ const formatCurrency = (value: number): string =>
 		currency: "EUR",
 	}).format(value);
 
-const calculateFees = (
-	propertyValue: number,
+const calculateFee = (
+	averagePropertyValue: number,
 	amountOfDeclarations: number
-): Result => {
+): FeeResults => {
 	let value = 0;
 
-	fees.forEach((entry: OutputFee) => {
-		if (propertyValue >= entry.start && propertyValue <= entry.limit) {
+	fees.forEach((entry: Fee) => {
+		if (
+			averagePropertyValue >= entry.start &&
+			averagePropertyValue <= entry.limit
+		) {
 			value = amountOfDeclarations * entry.fee;
 		}
 	});
 
-	let minValue = formatCurrency(value * 1);
-	let midValue = formatCurrency(value * 9.5);
-	let maxValue = formatCurrency(value * 18);
+	let minFee = formatCurrency(value * 1);
+	let avarageFee = formatCurrency(value * 9.5);
+	let maxFee = formatCurrency(value * 18);
 
-	return { minValue, midValue, maxValue };
+	return { minFee, avarageFee, maxFee };
 };

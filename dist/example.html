@@ -26,9 +26,11 @@
     </button>
   </form>
 
-  <h1 id="mid-result"></h1>
-  <h3 id="min-result"></h3>
-  <h3 id="max-result"></h3>
+  <div>
+    <h1 id="mid-result"></h1>
+    <h3 id="min-result"></h3>
+    <h3 id="max-result"></h3>
+  </div>
 
   <small>Die Werte basieren auf einer Abrechnung nach §24 Abs.1 Nr. 11 StBVV. Abweichende Honorarvereinbarungen nach §4
     StBVV können Sie jederzeit mit Ihren Mandanten treffen.</small>
@@ -38,17 +40,17 @@
   const form = document.getElementById('form')
   const propertyValueInput = document.getElementById('property-value')
   const amountOfDeclarationsInput = document.getElementById('amount-of-declarations')
-  const midValue = document.getElementById('mid-result')
-  const minValue = document.getElementById('min-result')
-  const maxValue = document.getElementById('max-result')
+  const midResult = document.getElementById('mid-result')
+  const minResult = document.getElementById('min-result')
+  const maxResult = document.getElementById('max-result')
 
   form.onsubmit = (e) => {
     e.preventDefault()
-    const calculations = calculateFees(propertyValueInput.value, amountOfDeclarationsInput.value)
+    const calculations = calculateFee(propertyValueInput.value, amountOfDeclarationsInput.value)
 
-    midValue.innerText = 'Mittleres Honorar: ' + calculations.midValue
-    minValue.innerText = 'Minimales Honorar: ' + calculations.minValue
-    maxValue.innerText = 'Maximales Honorar: ' + calculations.maxValue
+    midResult.innerText = 'Mittleres Honorar: ' + calculations.avarageFee
+    minResult.innerText = 'Minimales Honorar: ' + calculations.minFee
+    maxResult.innerText = 'Maximales Honorar: ' + calculations.maxFee
   }
 </script>
 
