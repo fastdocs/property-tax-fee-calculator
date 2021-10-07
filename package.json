@@ -1,0 +1,24 @@
+{
+	"name": "property-tax-fee-calculator",
+	"version": "1.0.0",
+	"description": "Open Source calculator for property tax fees based on Steuerberatervergütungsverordnung",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc && cp src/example.html dist/example.html",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fastdocs/property-tax-fee-calculator.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT License",
+	"bugs": {
+		"url": "https://github.com/fastdocs/property-tax-fee-calculator/issues"
+	},
+	"homepage": "https://github.com/fastdocs/property-tax-fee-calculator#readme",
+	"devDependencies": {
+		"typescript": "^4.4.3"
+	}
+}
