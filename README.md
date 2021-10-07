@@ -4,12 +4,14 @@ Open Source calculator for property tax fees based on Steuerberatervergütungsve
 
 ## Usage
 
-The `calculateFee()` function expexts to variables `averagePropertyValue` and `amountOfDeclarations`.It returns an object with three different values. A maximum fee, a minimum fee and a avarage fee.
+The `calculateFee()` function expexts to variables `averagePropertyValue` and `amountOfDeclarations`. The Result returns an object with three different values. A maximum fee, a minimum fee and a avarage fee.
 
 ### Example
 
-`calculateFee(10000, 1)`
-
-This will return 40,30 € as the minimum fee, 382,85 € as the avarage fee and 725,40 € as the maximum fee.`
+```js
+calculateFee(10000, 1).minFee; // returns '40,30 €'
+calculateFee(10000, 1).averageFee; // returns '382,85 €'
+calculateFee(10000, 1).maxFee; // returns '725,40 €'
+```
 
 _Take a look at the `example.html` file in the `dist` folder._
