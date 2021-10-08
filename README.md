@@ -14,4 +14,4 @@ calculateFee(10000, 1).averageFee; // returns '382,85 €'
 calculateFee(10000, 1).maxFee; // returns '725,40 €'
 ```
 
-_Take a look at the `example.html` file in the `dist` folder._
+_Take a look at the `index.html` file in the `dist` folder or check https://fastdocs.github.io/property-tax-fee-calculator._
