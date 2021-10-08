@@ -4,7 +4,7 @@
 	"description": "Open Source calculator for property tax fees based on Steuerberatervergütungsverordnung",
 	"main": "index.js",
 	"scripts": {
-		"build": "tsc && cp src/example.html dist/example.html",
+		"build": "tsc && cp src/*.html dist/",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
