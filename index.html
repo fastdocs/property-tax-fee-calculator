@@ -6,34 +6,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./index.js"></script>
+  <link rel="stylesheet" href="index.css">
   <title>Document</title>
 </head>
 
 <body>
-  <form id="form">
-    <label>
-      Durchschn. Grundstückswert
-      <input type="number" id="property-value" min="0" max="5000000" step="1" value="250000">
-    </label>
+  <main>
+    <form id="form">
+      <label>
+        Durchschn. Grundstückswert
+        <input type="number" id="property-value" min="0" max="5000000" step="1" value="250000" placeholder="250000">
+      </label>
 
-    <label>
-      Anzahl der Erklärungen
-      <input type="number" id="amount-of-declarations" min="0" step="1" value="200">
-    </label>
+      <label>
+        Anzahl der Erklärungen
+        <input type="number" id="amount-of-declarations" min="0" step="1" value="200" placeholder="200">
+      </label>
 
-    <button type="submit">
-      Berechnen
-    </button>
-  </form>
+      <button type="submit">
+        Berechnen
+      </button>
 
-  <div>
-    <h1 id="mid-result"></h1>
-    <h3 id="min-result"></h3>
-    <h3 id="max-result"></h3>
-  </div>
+      <small>
+        Die Werte basieren auf einer Abrechnung nach §24 Abs.1 Nr. 11 StBVV. Abweichende Honorarvereinbarungen nach
+        §4 StBVV können Sie jederzeit mit Ihren Mandanten treffen.
+      </small>
+    </form>
 
-  <small>Die Werte basieren auf einer Abrechnung nach §24 Abs.1 Nr. 11 StBVV. Abweichende Honorarvereinbarungen nach §4
-    StBVV können Sie jederzeit mit Ihren Mandanten treffen.</small>
+    <aside>
+      <label>
+        Honorar (Mittelwert)
+
+        <h1 id="mid-result">
+          229.330,00 €
+        </h1>
+      </label>
+
+      <div>
+        <label>
+          Min. Honorar
+
+          <h3 id="min-result">
+            24.140,00 €
+          </h3>
+        </label>
+
+        <label>
+          Max. Honorar
+
+          <h3 id="max-result">
+            434.520,00 €
+          </h3>
+        </label>
+      </div>
+    </aside>
+  </main>
 </body>
 
 <script>
@@ -48,9 +75,9 @@
     e.preventDefault()
     const calculations = calculateFee(propertyValueInput.value, amountOfDeclarationsInput.value)
 
-    midResult.innerText = 'Mittleres Honorar: ' + calculations.avarageFee
-    minResult.innerText = 'Minimales Honorar: ' + calculations.minFee
-    maxResult.innerText = 'Maximales Honorar: ' + calculations.maxFee
+    midResult.innerText = calculations.avarageFee
+    minResult.innerText = calculations.minFee
+    maxResult.innerText = calculations.maxFee
   }
 </script>
 
