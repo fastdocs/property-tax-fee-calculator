@@ -7,10 +7,15 @@
 
 body {
 	font-family: "Poppins", sans-serif;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	font-size: 16px;
 	color: #3b5070;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 h1,
@@ -31,8 +36,8 @@ h3 {
 main {
 	display: -ms-grid;
 	display: grid;
+	gap: 16px;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	padding: 5%;
 }
 
 #form {
@@ -44,7 +49,7 @@ main {
 	-ms-grid-row-align: center;
 	align-self: center;
 	gap: 16px;
-	padding: 40px;
+	margin: 16px;
 }
 
 #form label {
@@ -116,11 +121,12 @@ aside {
 	justify-content: center;
 	padding: 40px;
 	gap: 24px;
-
+	margin: 16px;
 	color: #fff;
 	background: #f1544f;
 	border: 1px solid #f1544f;
 	border-radius: 8px;
+	overflow: hidden;
 }
 
 aside div {
