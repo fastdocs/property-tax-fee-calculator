@@ -1,12 +1,18 @@
-# property-tax-fee-calculator
+# ⚠️ This project is DEPRECATED and will not be updated anymore ⚠️
+
+The used values are no longer valid. Don't use it to calculate possible fees.
+
+---
+
+## property-tax-fee-calculator
 
 Open Source calculator for property tax fees based on [Steuerberatervergütungsverordnung](https://www.gesetze-im-internet.de/stbgebv/BJNR014420981.html).
 
-## Usage
+### Usage
 
 The `calculateFee()` function expects to variables `averagePropertyValue` and `amountOfDeclarations`. The Result returns an object with three different values. A maximum fee, a minimum fee and an avarage fee.
 
-### Example
+#### Example
 
 ```js
 calculateFee(10000, 1).minFee; // returns '40,30 €'
