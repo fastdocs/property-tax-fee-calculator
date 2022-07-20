@@ -595,7 +595,7 @@ var calculateFee = function (averagePropertyValue, amountOfDeclarations) {
         }
     });
     var minFee = formatCurrency(value * 1);
-    var avarageFee = formatCurrency(value * 9.5);
-    var maxFee = formatCurrency(value * 18);
+    var avarageFee = formatCurrency(value * 5);
+    var maxFee = formatCurrency(value * 9);
     return { minFee: minFee, avarageFee: avarageFee, maxFee: maxFee };
 };
