@@ -691,8 +691,8 @@ const calculateFee = (
 	});
 
 	let minFee = formatCurrency(value * 1);
-	let avarageFee = formatCurrency(value * 9.5);
-	let maxFee = formatCurrency(value * 18);
+	let avarageFee = formatCurrency(value * 5);
+	let maxFee = formatCurrency(value * 9);
 
 	return { minFee, avarageFee, maxFee };
 };
