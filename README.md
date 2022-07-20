@@ -1,9 +1,3 @@
-# ⚠️ This project is DEPRECATED and will not be updated anymore ⚠️
-
-The used values are no longer valid. Don't use it to calculate possible fees.
-
----
-
 ## property-tax-fee-calculator
 
 Open Source calculator for property tax fees based on [Steuerberatervergütungsverordnung](https://www.gesetze-im-internet.de/stbgebv/BJNR014420981.html).
